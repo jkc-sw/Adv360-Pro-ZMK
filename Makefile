@@ -6,6 +6,8 @@ DOCKER := $(shell { command -v podman || command -v docker; })
 all: setup build
 
 build: firmware/$$(TIMESTAMP)-left.uf2 firmware/$$(TIMESTAMP)-right.uf2
+	cp firmware/$(TIMESTAMP)-left.uf2 firmware/left.uf2
+	cp firmware/$(TIMESTAMP)-right.uf2 firmware/right.uf2
 
 clean:
 	rm -f firmware/*.uf2
