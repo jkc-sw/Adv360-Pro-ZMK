@@ -30,11 +30,11 @@
 
     default_layer {
       bindings = <
-        &kp MINUS      &kp N1   &kp N2    &kp N3    &kp N4     &kp N5 &kp LGUI                                                                         &kp RGUI  &kp N6 &kp N7   &kp N8   &kp N9   &kp N0   &kp EQUAL
-        &lt QWERTY TAB &kp SQT  &kp COMMA &kp DOT   &kp P      &kp Y  &kp LC(S)                                                                        &kp LC(S) &kp F  &kp G    &kp C    &kp R    &kp L    &kp GRAVE
-        &kp LSHFT      &kp A    &kp O     &kp E     &kp U      &kp I  &kp LC(S)           &kp LCTRL &kp LALT              &kp RALT &kp RCTRL           &kp LC(S) &kp D  &kp H    &kp T    &kp N    &kp S    &kp RSHFT
-        &kp LC(LSHFT)  &kp SEMI &kp Q     &kp J     &kp K      &kp X            &none     &none     &kp PG_UP &none &none &kp HOME &none     &none               &kp B  &kp M    &kp W    &kp V    &kp Z    &kp RCTRL
-        &kp LG(LCTRL)  &kp DOWN &kp LEFT  &kp RIGHT &kp UP                      &kp SPACE &kp ESC   &kp PG_DN             &kp END  &kp BSPC  &kp ENTER                  &kp FSLH &kp BSLH &kp LBKT &kp RBKT &mo SYS
+        &kp MINUS     &kp N1   &kp N2    &kp N3    &kp N4     &kp N5 &kp LGUI                                                                         &kp RGUI  &kp N6 &kp N7   &kp N8   &kp N9   &kp N0   &kp EQUAL
+        &lt FN TAB    &kp SQT  &kp COMMA &kp DOT   &kp P      &kp Y  &kp LC(S)                                                                        &kp LC(S) &kp F  &kp G    &kp C    &kp R    &kp L    &kp GRAVE
+        &kp LSHFT     &kp A    &kp O     &kp E     &kp U      &kp I  &kp LC(S)           &kp LCTRL &kp LALT              &kp RALT &kp RCTRL           &kp LC(S) &kp D  &kp H    &kp T    &kp N    &kp S    &kp RSHFT
+        &kp LC(LSHFT) &kp SEMI &kp Q     &kp J     &kp K      &kp X            &none     &none     &kp PG_UP &none &none &kp HOME &none     &none               &kp B  &kp M    &kp W    &kp V    &kp Z    &kp RCTRL
+        &kp LG(LCTRL) &kp DOWN &kp LEFT  &kp RIGHT &kp UP                      &kp SPACE &kp ESC   &kp PG_DN             &kp END  &kp BSPC  &kp ENTER                  &kp FSLH &kp BSLH &kp LBKT &kp RBKT &mo SYS
       >;
     };
     qwerty {
