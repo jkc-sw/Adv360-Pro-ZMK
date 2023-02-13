@@ -87,11 +87,11 @@
     };
     fn {
       bindings = <
-        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog NUM                                                                                              &mo SYS &kp F7 &kp F8     &kp F9        &kp F10        &kp F11           &kp F12
-        &trans &trans &trans &trans &trans &trans &none                                                                                                 &none   &trans &trans     &trans        &trans         &trans            &trans
-        &trans &trans &trans &trans &trans &trans &none                      &trans                  &trans                 &trans       &trans         &none   &trans &to DVORAK &to QWERTY_MY &to DVORAK_MAC &to QWERTY_MY_MAC &trans
-        &trans &trans &trans &trans &trans &trans          &none             &none                   &kp C_MUTE &none &none &kp C_VOL_UP &none   &none          &trans &trans     &trans        &trans         &trans            &trans
-        &trans &trans &trans &trans &trans                 &kp LC(LA(LS(F))) &kp LC(LA(PAUSE_BREAK)) &trans                 &kp C_VOL_DN &kp DEL &trans                &trans     &trans        &trans         &trans            &trans
+        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog NUM                                                                                              &mo SYS &kp F7 &kp F8     &kp F9         &kp F10    &kp F11           &kp F12
+        &trans &trans &trans &trans &trans &trans &none                                                                                                 &none   &trans &trans     &trans         &trans     &trans            &trans
+        &trans &trans &trans &trans &trans &trans &none                      &trans                  &trans                 &trans       &trans         &none   &trans &to DVORAK &to DVORAK_MAC &to QWERTY &to QWERTY_MY_MAC &trans
+        &trans &trans &trans &trans &trans &trans          &none             &none                   &kp C_MUTE &none &none &kp C_VOL_UP &none   &none          &trans &trans     &trans         &trans     &trans            &trans
+        &trans &trans &trans &trans &trans                 &kp LC(LA(LS(F))) &kp LC(LA(PAUSE_BREAK)) &trans                 &kp C_VOL_DN &kp DEL &trans                &trans     &trans         &trans     &trans            &trans
       >;
     };
     mod {
