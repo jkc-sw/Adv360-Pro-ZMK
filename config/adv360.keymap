@@ -4,14 +4,16 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
-#define DVORAK        0
-#define QWERTY_MY     1
-#define DVORAK_MAC    2
-#define QWERTY_MY_MAC 3
-#define QWERTY        4
-#define NUM           5
-#define FN            6
-#define SYS           7
+#define DVORAK_WIN               0
+#define QWERTY_WIN               1
+#define DVORAK_MAC               2
+#define QWERTY_MAC               3
+#define DVORAK_MAC_CTRL_CMD_SWAP 4
+#define QWERTY_MAC_CTRL_CMD_SWAP 5
+#define BUILTIN_QWERTY           6
+#define NUM                      7
+#define FN                       8
+#define SYS                      9
 
 / {
     behaviors {
@@ -33,41 +35,59 @@
 
     default_layer {
       bindings = <
-        &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LGUI                                                                         &kp RGUI &kp N6 &kp N7   &kp N8   &kp N9         &kp N0        &kp LC(S)
-        &lt FN TAB    &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                                        &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L         &kp GRAVE
-        &kp LSHFT     &kp A    &kp O     &kp E     &kp U  &kp I  &kp EQUAL           &kp LCTRL &kp LALT              &kp RALT &kp RCTRL           &kp RBKT &kp D  &kp H    &kp T    &kp N          &kp S         &kp RSHFT
-        &kp LC(LSHFT) &kp SEMI &kp Q     &kp J     &kp K  &kp X            &none     &none     &kp PG_UP &none &none &kp HOME &none     &none              &kp B  &kp M    &kp W    &kp V          &kp Z         &kp RCTRL
-        &kp LG(LCTRL) &kp DOWN &kp LEFT  &kp RIGHT &kp UP                  &kp SPACE &kp ESC   &kp PG_DN             &kp END  &kp BSPC  &kp ENTER                 &kp FSLH &kp BSLH &to DVORAK_MAC &to QWERTY_MY &mo SYS
+        &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LGUI                                                                         &kp RGUI &kp N6 &kp N7   &kp N8   &kp N9         &kp N0         &kp LC(S)
+        &lt FN TAB    &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                                        &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L          &kp GRAVE
+        &kp LSHFT     &kp A    &kp O     &kp E     &kp U  &kp I  &kp EQUAL           &kp LCTRL &kp LALT              &kp RALT &kp RCTRL           &kp RBKT &kp D  &kp H    &kp T    &kp N          &kp S          &kp RSHFT
+        &kp LC(LSHFT) &kp SEMI &kp Q     &kp J     &kp K  &kp X            &none     &none     &kp PG_UP &none &none &kp HOME &none     &none              &kp B  &kp M    &kp W    &kp V          &kp Z          &kp RCTRL
+        &kp LG(LCTRL) &kp DOWN &kp LEFT  &kp RIGHT &kp UP                  &kp SPACE &kp ESC   &kp PG_DN             &kp END  &kp BSPC  &kp ENTER                 &kp FSLH &kp BSLH &to QWERTY_WIN &to DVORAK_MAC &mo SYS
       >;
     };
-    qwerty_my {
+    qwerty_win {
       bindings = <
-        &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LGUI                                                                         &kp RGUI &kp N6 &kp N7  &kp N8    &kp N9            &kp N0     &kp LC(S)
-        &lt FN TAB    &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                                        &kp LBKT &kp Y  &kp U   &kp I     &kp O             &kp P      &kp GRAVE
-        &kp LSHFT     &kp A    &kp S    &kp D     &kp F  &kp G  &kp EQUAL           &kp LCTRL &kp LALT              &kp RALT &kp RCTRL           &kp RBKT &kp H  &kp J   &kp K     &kp L             &kp SEMI   &kp RSHFT
-        &kp LC(LSHFT) &kp Z    &kp X    &kp C     &kp V  &kp B            &none     &none     &kp PG_UP &none &none &kp HOME &none     &none              &kp N  &kp M   &kp COMMA &kp DOT           &kp FSLH   &kp RCTRL
-        &kp LG(LCTRL) &kp DOWN &kp LEFT &kp RIGHT &kp UP                  &kp SPACE &kp ESC   &kp PG_DN             &kp END  &kp BSPC  &kp ENTER                 &kp SQT &kp BSLH  &to QWERTY_MY_MAC &to DVORAK &mo SYS
+        &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LGUI                                                                         &kp RGUI &kp N6 &kp N7  &kp N8    &kp N9         &kp N0         &kp LC(S)
+        &lt FN TAB    &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                                        &kp LBKT &kp Y  &kp U   &kp I     &kp O          &kp P          &kp GRAVE
+        &kp LSHFT     &kp A    &kp S    &kp D     &kp F  &kp G  &kp EQUAL           &kp LCTRL &kp LALT              &kp RALT &kp RCTRL           &kp RBKT &kp H  &kp J   &kp K     &kp L          &kp SEMI       &kp RSHFT
+        &kp LC(LSHFT) &kp Z    &kp X    &kp C     &kp V  &kp B            &none     &none     &kp PG_UP &none &none &kp HOME &none     &none              &kp N  &kp M   &kp COMMA &kp DOT        &kp FSLH       &kp RCTRL
+        &kp LG(LCTRL) &kp DOWN &kp LEFT &kp RIGHT &kp UP                  &kp SPACE &kp ESC   &kp PG_DN             &kp END  &kp BSPC  &kp ENTER                 &kp SQT &kp BSLH  &to DVORAK_WIN &to QWERTY_MAC &mo SYS
       >;
     };
     dvorak_mac {
       bindings = <
-        &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LALT                                                                         &kp RALT &kp N6 &kp N7   &kp N8   &kp N9     &kp N0            &kp LC(S)
-        &lt FN TAB    &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                                        &kp LBKT &kp F  &kp G    &kp C    &kp R      &kp L             &kp GRAVE
-        &kp LSHFT     &kp A    &kp O     &kp E     &kp U  &kp I  &kp EQUAL           &kp LGUI &kp LCTRL             &kp RCTRL &kp RGUI            &kp RBKT &kp D  &kp H    &kp T    &kp N      &kp S             &kp RSHFT
-        &kp LC(LSHFT) &kp SEMI &kp Q     &kp J     &kp K  &kp X            &none     &none    &kp PG_UP &none &none &kp HOME  &none     &none              &kp B  &kp M    &kp W    &kp V      &kp Z             &kp RCTRL
-        &kp LG(LCTRL) &kp DOWN &kp LEFT  &kp RIGHT &kp UP                  &kp SPACE &kp ESC  &kp PG_DN             &kp END   &kp BSPC  &kp ENTER                 &kp FSLH &kp BSLH &to DVORAK &to QWERTY_MY_MAC &mo SYS
+        &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LALT                                                                         &kp RALT &kp N6 &kp N7   &kp N8   &kp N9         &kp N0         &kp LC(S)
+        &lt FN TAB    &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                                        &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L          &kp GRAVE
+        &kp LSHFT     &kp A    &kp O     &kp E     &kp U  &kp I  &kp EQUAL           &kp LGUI &kp LCTRL             &kp RCTRL &kp RGUI            &kp RBKT &kp D  &kp H    &kp T    &kp N          &kp S          &kp RSHFT
+        &kp LC(LSHFT) &kp SEMI &kp Q     &kp J     &kp K  &kp X            &none     &none    &kp PG_UP &none &none &kp HOME  &none     &none              &kp B  &kp M    &kp W    &kp V          &kp Z          &to DVORAK_MAC_CTRL_CMD_SWAP
+        &kp LG(LCTRL) &kp DOWN &kp LEFT  &kp RIGHT &kp UP                  &kp SPACE &kp ESC  &kp PG_DN             &kp END   &kp BSPC  &kp ENTER                 &kp FSLH &kp BSLH &to QWERTY_MAC &to DVORAK_WIN &mo SYS
       >;
     };
-    qwerty_my_mac {
+    qwerty_mac {
       bindings = <
-        &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LALT                                                                         &kp RALT &kp N6 &kp N7  &kp N8    &kp N9        &kp N0         &kp LC(S)
-        &lt FN TAB    &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                                        &kp LBKT &kp Y  &kp U   &kp I     &kp O         &kp P          &kp GRAVE
-        &kp LSHFT     &kp A    &kp S    &kp D     &kp F  &kp G  &kp EQUAL           &kp LGUI &kp LCTRL             &kp RCTRL &kp RGUI           &kp RBKT &kp H  &kp J   &kp K     &kp L         &kp SEMI       &kp RSHFT
-        &kp LC(LSHFT) &kp Z    &kp X    &kp C     &kp V  &kp B            &none     &none    &kp PG_UP &none &none &kp HOME  &none    &none              &kp N  &kp M   &kp COMMA &kp DOT       &kp FSLH       &kp RCTRL
-        &kp LG(LCTRL) &kp DOWN &kp LEFT &kp RIGHT &kp UP                  &kp SPACE &kp ESC  &kp PG_DN             &kp END   &kp BSPC &kp ENTER                 &kp SQT &kp BSLH  &to QWERTY_MY &to DVORAK_MAC &mo SYS
+        &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LALT                                                                        &kp RALT &kp N6 &kp N7  &kp N8    &kp N9         &kp N0         &kp LC(S)
+        &lt FN TAB    &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                                       &kp LBKT &kp Y  &kp U   &kp I     &kp O          &kp P          &kp GRAVE
+        &kp LSHFT     &kp A    &kp S    &kp D     &kp F  &kp G  &kp EQUAL           &kp LGUI &kp LCTRL             &kp RCTRL &kp RGUI           &kp RBKT &kp H  &kp J   &kp K     &kp L          &kp SEMI       &kp RSHFT
+        &kp LC(LSHFT) &kp Z    &kp X    &kp C     &kp V  &kp B            &none     &none    &kp PG_UP &none &none &kp HOME  &none    &none              &kp N  &kp M   &kp COMMA &kp DOT        &kp FSLH       &to QWERTY_MAC_CTRL_CMD_SWAP
+        &kp LG(LCTRL) &kp DOWN &kp LEFT &kp RIGHT &kp UP                  &kp SPACE &kp ESC  &kp PG_DN             &kp END   &kp BSPC &kp ENTER                 &kp SQT &kp BSLH  &to DVORAK_MAC &to QWERTY_WIN &mo SYS
       >;
     };
-    qwerty {
+    dvorak_mac_ctrl_cmd_swap {
+      bindings = <
+        &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LALT                                                                         &kp RALT &kp N6 &kp N7   &kp N8   &kp N9         &kp N0         &kp LC(S)
+        &lt FN TAB    &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                                        &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L          &kp GRAVE
+        &kp LSHFT     &kp A    &kp O     &kp E     &kp U  &kp I  &kp EQUAL           &kp LCTRL &kp LGUI              &kp RGUI &kp RCTRL           &kp RBKT &kp D  &kp H    &kp T    &kp N          &kp S          &kp RSHFT
+        &kp LC(LSHFT) &kp SEMI &kp Q     &kp J     &kp K  &kp X            &none     &none     &kp PG_UP &none &none &kp HOME &none     &none              &kp B  &kp M    &kp W    &kp V          &kp Z          &to DVORAK_MAC
+        &kp LG(LCTRL) &kp DOWN &kp LEFT  &kp RIGHT &kp UP                  &kp SPACE &kp ESC   &kp PG_DN             &kp END  &kp BSPC  &kp ENTER                 &kp FSLH &kp BSLH &to QWERTY_MAC &to DVORAK_WIN &mo SYS
+      >;
+    };
+    qwerty_mac_ctrl_cmd_swap {
+      bindings = <
+        &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LALT                                                                         &kp RALT &kp N6 &kp N7  &kp N8    &kp N9         &kp N0         &kp LC(S)
+        &lt FN TAB    &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                                        &kp LBKT &kp Y  &kp U   &kp I     &kp O          &kp P          &kp GRAVE
+        &kp LSHFT     &kp A    &kp S    &kp D     &kp F  &kp G  &kp EQUAL           &kp LCTRL &kp LGUI              &kp RGUI &kp RCTRL           &kp RBKT &kp H  &kp J   &kp K     &kp L          &kp SEMI       &kp RSHFT
+        &kp LC(LSHFT) &kp Z    &kp X    &kp C     &kp V  &kp B            &none     &none     &kp PG_UP &none &none &kp HOME &none     &none              &kp N  &kp M   &kp COMMA &kp DOT        &kp FSLH       &to QWERTY_MAC
+        &kp LG(LCTRL) &kp DOWN &kp LEFT &kp RIGHT &kp UP                  &kp SPACE &kp ESC   &kp PG_DN             &kp END  &kp BSPC  &kp ENTER                 &kp SQT &kp BSLH  &to DVORAK_MAC &to QWERTY_WIN &mo SYS
+      >;
+    };
+    builtin_qwerty {
       bindings = <
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog NUM                                                                       &mo SYS &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                          &none   &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
@@ -87,11 +107,11 @@
     };
     fn {
       bindings = <
-        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog NUM                                                                                              &mo SYS &kp F7 &kp F8     &kp F9         &kp F10    &kp F11           &kp F12
-        &trans &trans &trans &trans &trans &trans &none                                                                                                 &none   &trans &trans     &trans         &trans     &trans            &trans
-        &trans &trans &trans &trans &trans &trans &none                      &trans                  &trans                 &trans       &trans         &none   &trans &to DVORAK &to DVORAK_MAC &to QWERTY &to QWERTY_MY_MAC &trans
-        &trans &trans &trans &trans &trans &trans          &none             &none                   &kp C_MUTE &none &none &kp C_VOL_UP &none   &none          &trans &trans     &trans         &trans     &trans            &trans
-        &trans &trans &trans &trans &trans                 &kp LC(LA(LS(F))) &kp LC(LA(PAUSE_BREAK)) &trans                 &kp C_VOL_DN &kp DEL &trans                &trans     &trans         &trans     &trans            &trans
+        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog NUM                                                                                              &mo SYS &kp F7 &kp F8         &kp F9         &kp F10            &kp F11        &kp F12
+        &trans &trans &trans &trans &trans &trans &none                                                                                                 &none   &trans &trans         &trans         &trans             &trans         &trans
+        &trans &trans &trans &trans &trans &trans &none                      &trans                  &trans                 &trans       &trans         &none   &trans &to DVORAK_WIN &to DVORAK_MAC &to BUILTIN_QWERTY &to QWERTY_MAC &trans
+        &trans &trans &trans &trans &trans &trans          &none             &none                   &kp C_MUTE &none &none &kp C_VOL_UP &none   &none          &trans &trans         &trans         &trans             &trans         &trans
+        &trans &trans &trans &trans &trans                 &kp LC(LA(LS(F))) &kp LC(LA(PAUSE_BREAK)) &trans                 &kp C_VOL_DN &kp DEL &trans                &trans         &trans         &trans             &trans         &trans
       >;
     };
     mod {
