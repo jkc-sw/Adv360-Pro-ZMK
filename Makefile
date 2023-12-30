@@ -21,6 +21,8 @@ all:
 		-e TIMESTAMP=$(TIMESTAMP) \
 		-e COMMIT=$(COMMIT) \
 		zmk
+	cp firmware/$(TIMESTAMP)-$(COMMIT)-left.uf2 firmware/left.uf2
+	cp firmware/$(TIMESTAMP)-$(COMMIT)-right.uf2 firmware/right.uf2
 
 clean:
 	rm -f firmware/*.uf2
