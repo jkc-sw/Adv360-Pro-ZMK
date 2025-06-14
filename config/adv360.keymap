@@ -24,7 +24,7 @@
 
       hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
-          label = "HOMEROW_MODS";
+          display-name = "Homerow Hold Tap Mod";
           #binding-cells = <2>;
           tapping-term-ms = <200>;
           quick_tap_ms = <175>;
@@ -37,7 +37,7 @@
     compatible = "zmk,keymap";
 
     default_layer {
-      display-name = "Base";
+      display-name = "Dvorak Windows";
       bindings = <
         &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LGUI                                                             &kp RGUI &kp N6 &kp N7   &kp N8   &kp N9         &kp N0         &kp LC(S)
         &kp TAB       &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                            &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L          &kp BSPC
@@ -47,6 +47,7 @@
       >;
     };
     qwerty_win {
+      display-name = "Qwerty Windows";
       bindings = <
         &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LGUI                                                             &kp RGUI &kp N6 &kp N7  &kp N8    &kp N9         &kp N0         &kp LC(S)
         &kp TAB       &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                            &kp LBKT &kp Y  &kp U   &kp I     &kp O          &kp P          &kp BSPC
@@ -56,6 +57,7 @@
       >;
     };
     dvorak_mac {
+      display-name = "Dvorak Mac";
       bindings = <
         &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LALT                                                            &kp RALT &kp N6 &kp N7   &kp N8   &kp N9         &kp N0         &kp LC(S)
         &kp TAB       &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                           &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L          &kp BSPC
@@ -65,6 +67,7 @@
       >;
     };
     qwerty_mac {
+      display-name = "Qwerty Mac";
       bindings = <
         &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LALT                                                            &kp RALT &kp N6 &kp N7  &kp N8    &kp N9         &kp N0         &kp LC(S)
         &kp TAB       &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                           &kp LBKT &kp Y  &kp U   &kp I     &kp O          &kp P          &kp BSPC
@@ -74,6 +77,7 @@
       >;
     };
     dvorak_mac_ctrl_cmd_swap {
+      display-name = "Dvorak Mac Ctrl";
       bindings = <
         &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LALT                                                             &kp RALT &kp N6 &kp N7   &kp N8   &kp N9         &kp N0         &kp LC(S)
         &kp TAB       &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                            &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L          &kp BSPC
@@ -83,6 +87,7 @@
       >;
     };
     qwerty_mac_ctrl_cmd_swap {
+      display-name = "Qwerty Mac Ctrl";
       bindings = <
         &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LALT                                                             &kp RALT &kp N6 &kp N7  &kp N8    &kp N9         &kp N0         &kp LC(S)
         &kp TAB       &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                            &kp LBKT &kp Y  &kp U   &kp I     &kp O          &kp P          &kp BSPC
@@ -92,6 +97,7 @@
       >;
     };
     builtin_qwerty {
+      display-name = "Qwerty Built-in";
       bindings = <
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog NUM                                                           &mo SYS &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                              &none   &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
