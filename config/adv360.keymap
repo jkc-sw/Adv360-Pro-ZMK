@@ -39,60 +39,60 @@
     default_layer {
       display-name = "Dvorak Windows";
       bindings = <
-        &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LGUI                                                          &kp RGUI &kp N6 &kp N7   &kp N8   &kp N9         &kp N0         &kp LC(S)
-        &kp TAB       &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                         &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L          &kp BSPC
-        &kp LSHFT     &kp A    &kp O     &kp E     &kp U  &kp I  &kp EQUAL           &kp LCTRL &kp LALT  &kp RALT &mo FN        &kp RBKT &kp D  &kp H    &kp T    &kp N          &kp S          &kp RSHFT
-        &kp LC(LSHFT) &kp SEMI &kp Q     &kp J     &kp K  &kp X                                &kp PG_UP &kp HOME                           &kp B  &kp M    &kp W    &kp V          &kp Z          &kp RCTRL
+        &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LGUI                                                             &kp RGUI &kp N6 &kp N7   &kp N8   &kp N9         &kp N0         &kp LC(S)
+        &kp TAB       &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                            &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L          &kp BSPC
+        &kp LSHFT     &kp A    &kp O     &kp E     &kp U  &kp I  &kp EQUAL           &kp LCTRL &kp LALT  &kp RALT &mo FN              &kp RBKT &kp D  &kp H    &kp T    &kp N          &kp S          &kp RSHFT
+        &kp LC(LSHFT) &kp SEMI &kp Q     &kp J     &kp K  &kp X                                &kp PG_UP &kp HOME                              &kp B  &kp M    &kp W    &kp V          &kp Z          &kp RCTRL
         &kp LG(LCTRL) &kp DOWN &kp LEFT  &kp RIGHT &kp UP                  &kp SPACE &kp ESC   &kp PG_DN &kp END  &kp ENTER &kp RCTRL                 &kp FSLH &kp BSLH &to QWERTY_WIN &to DVORAK_MAC &mo SYS
       >;
     };
     qwerty_win {
       display-name = "Qwerty Windows";
       bindings = <
-        &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LGUI                                                          &kp RGUI &kp N6 &kp N7  &kp N8    &kp N9         &kp N0         &kp LC(S)
-        &kp TAB       &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                         &kp LBKT &kp Y  &kp U   &kp I     &kp O          &kp P          &kp BSPC
-        &kp LSHFT     &kp A    &kp S    &kp D     &kp F  &kp G  &kp EQUAL           &kp LCTRL &kp LALT  &kp RALT &mo FN       &kp RBKT &kp H  &kp J   &kp K     &kp L          &kp SEMI       &kp RSHFT
-        &kp LC(LSHFT) &kp Z    &kp X    &kp C     &kp V  &kp B                                &kp PG_UP &kp HOME                           &kp N  &kp M   &kp COMMA &kp DOT        &kp FSLH       &kp RCTRL
+        &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LGUI                                                             &kp RGUI &kp N6 &kp N7  &kp N8    &kp N9         &kp N0         &kp LC(S)
+        &kp TAB       &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                            &kp LBKT &kp Y  &kp U   &kp I     &kp O          &kp P          &kp BSPC
+        &kp LSHFT     &kp A    &kp S    &kp D     &kp F  &kp G  &kp EQUAL           &kp LCTRL &kp LALT  &kp RALT &mo FN              &kp RBKT &kp H  &kp J   &kp K     &kp L          &kp SEMI       &kp RSHFT
+        &kp LC(LSHFT) &kp Z    &kp X    &kp C     &kp V  &kp B                                &kp PG_UP &kp HOME                              &kp N  &kp M   &kp COMMA &kp DOT        &kp FSLH       &kp RCTRL
         &kp LG(LCTRL) &kp DOWN &kp LEFT &kp RIGHT &kp UP                  &kp SPACE &kp ESC   &kp PG_DN &kp END  &kp ENTER &kp RCTRL                 &kp SQT &kp BSLH  &to DVORAK_WIN &to QWERTY_MAC &mo SYS
       >;
     };
     dvorak_mac {
       display-name = "Dvorak Mac";
       bindings = <
-        &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LALT                                                          &kp RALT &kp N6 &kp N7   &kp N8   &kp N9         &kp N0         &kp LC(S)
-        &kp TAB       &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                         &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L          &kp BSPC
-        &kp LSHFT     &kp A    &kp O     &kp E     &kp U  &kp I  &kp EQUAL           &kp LGUI &kp LCTRL &kp RCTRL &mo FN         &kp RBKT &kp D  &kp H    &kp T    &kp N          &kp S          &kp RSHFT
-        &kp LC(LSHFT) &kp SEMI &kp Q     &kp J     &kp K  &kp X                               &kp PG_UP &kp HOME                            &kp B  &kp M    &kp W    &kp V          &kp Z          &to DVORAK_MAC_CTRL_CMD_SWAP
+        &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LALT                                                            &kp RALT &kp N6 &kp N7   &kp N8   &kp N9         &kp N0         &kp LC(S)
+        &kp TAB       &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                           &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L          &kp BSPC
+        &kp LSHFT     &kp A    &kp O     &kp E     &kp U  &kp I  &kp EQUAL           &kp LGUI &kp LCTRL &kp RCTRL &mo FN             &kp RBKT &kp D  &kp H    &kp T    &kp N          &kp S          &kp RSHFT
+        &kp LC(LSHFT) &kp SEMI &kp Q     &kp J     &kp K  &kp X                               &kp PG_UP &kp HOME                              &kp B  &kp M    &kp W    &kp V          &kp Z          &to DVORAK_MAC_CTRL_CMD_SWAP
         &kp LG(LCTRL) &kp DOWN &kp LEFT  &kp RIGHT &kp UP                  &kp SPACE &kp ESC  &kp PG_DN &kp END   &kp ENTER &kp RGUI                 &kp FSLH &kp BSLH &to QWERTY_MAC &to DVORAK_WIN &mo SYS
       >;
     };
     qwerty_mac {
       display-name = "Qwerty Mac";
       bindings = <
-        &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LALT                                                          &kp RALT &kp N6 &kp N7  &kp N8    &kp N9         &kp N0         &kp LC(S)
-        &kp TAB       &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                         &kp LBKT &kp Y  &kp U   &kp I     &kp O          &kp P          &kp BSPC
-        &kp LSHFT     &kp A    &kp S    &kp D     &kp F  &kp G  &kp EQUAL           &kp LGUI &kp LCTRL &kp RCTRL &mo FN        &kp RBKT &kp H  &kp J   &kp K     &kp L          &kp SEMI       &kp RSHFT
-        &kp LC(LSHFT) &kp Z    &kp X    &kp C     &kp V  &kp B                               &kp PG_UP &kp HOME                            &kp N  &kp M   &kp COMMA &kp DOT        &kp FSLH       &to QWERTY_MAC_CTRL_CMD_SWAP
+        &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LALT                                                            &kp RALT &kp N6 &kp N7  &kp N8    &kp N9         &kp N0         &kp LC(S)
+        &kp TAB       &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                           &kp LBKT &kp Y  &kp U   &kp I     &kp O          &kp P          &kp BSPC
+        &kp LSHFT     &kp A    &kp S    &kp D     &kp F  &kp G  &kp EQUAL           &kp LGUI &kp LCTRL &kp RCTRL &mo FN             &kp RBKT &kp H  &kp J   &kp K     &kp L          &kp SEMI       &kp RSHFT
+        &kp LC(LSHFT) &kp Z    &kp X    &kp C     &kp V  &kp B                               &kp PG_UP &kp HOME                              &kp N  &kp M   &kp COMMA &kp DOT        &kp FSLH       &to QWERTY_MAC_CTRL_CMD_SWAP
         &kp LG(LCTRL) &kp DOWN &kp LEFT &kp RIGHT &kp UP                  &kp SPACE &kp ESC  &kp PG_DN &kp END   &kp ENTER &kp RGUI                 &kp SQT &kp BSLH  &to DVORAK_MAC &to QWERTY_WIN &mo SYS
       >;
     };
     dvorak_mac_ctrl_cmd_swap {
       display-name = "Dvorak Mac Ctrl";
       bindings = <
-        &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LALT                                                          &kp RALT &kp N6 &kp N7   &kp N8   &kp N9         &kp N0         &kp LC(S)
-        &kp TAB       &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                         &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L          &kp BSPC
-        &kp LSHFT     &kp A    &kp O     &kp E     &kp U  &kp I  &kp EQUAL           &kp LCTRL &kp LGUI  &kp RGUI &mo FN       &kp RBKT &kp D  &kp H    &kp T    &kp N          &kp S          &kp RSHFT
-        &kp LC(LSHFT) &kp SEMI &kp Q     &kp J     &kp K  &kp X                                &kp PG_UP &kp HOME                           &kp B  &kp M    &kp W    &kp V          &kp Z          &to DVORAK_MAC
+        &kp LC(S)     &kp N1   &kp N2    &kp N3    &kp N4 &kp N5 &kp LALT                                                             &kp RALT &kp N6 &kp N7   &kp N8   &kp N9         &kp N0         &kp LC(S)
+        &kp TAB       &kp SQT  &kp COMMA &kp DOT   &kp P  &kp Y  &kp MINUS                                                            &kp LBKT &kp F  &kp G    &kp C    &kp R          &kp L          &kp BSPC
+        &kp LSHFT     &kp A    &kp O     &kp E     &kp U  &kp I  &kp EQUAL           &kp LCTRL &kp LGUI  &kp RGUI &mo FN              &kp RBKT &kp D  &kp H    &kp T    &kp N          &kp S          &kp RSHFT
+        &kp LC(LSHFT) &kp SEMI &kp Q     &kp J     &kp K  &kp X                                &kp PG_UP &kp HOME                              &kp B  &kp M    &kp W    &kp V          &kp Z          &to DVORAK_MAC
         &kp LG(LCTRL) &kp DOWN &kp LEFT  &kp RIGHT &kp UP                  &kp SPACE &kp ESC   &kp PG_DN &kp END  &kp ENTER &kp RCTRL                 &kp FSLH &kp BSLH &to QWERTY_MAC &to DVORAK_WIN &mo SYS
       >;
     };
     qwerty_mac_ctrl_cmd_swap {
       display-name = "Qwerty Mac Ctrl";
       bindings = <
-        &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LALT                                                          &kp RALT &kp N6 &kp N7  &kp N8    &kp N9         &kp N0         &kp LC(S)
-        &kp TAB       &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                         &kp LBKT &kp Y  &kp U   &kp I     &kp O          &kp P          &kp BSPC
-        &kp LSHFT     &kp A    &kp S    &kp D     &kp F  &kp G  &kp EQUAL           &kp LCTRL &kp LGUI  &kp RGUI &mo FN        &kp RBKT &kp H  &kp J   &kp K     &kp L          &kp SEMI       &kp RSHFT
-        &kp LC(LSHFT) &kp Z    &kp X    &kp C     &kp V  &kp B                                &kp PG_UP &kp HOME                           &kp N  &kp M   &kp COMMA &kp DOT        &kp FSLH       &to QWERTY_MAC
+        &kp LC(S)     &kp N1   &kp N2   &kp N3    &kp N4 &kp N5 &kp LALT                                                             &kp RALT &kp N6 &kp N7  &kp N8    &kp N9         &kp N0         &kp LC(S)
+        &kp TAB       &kp Q    &kp W    &kp E     &kp R  &kp T  &kp MINUS                                                            &kp LBKT &kp Y  &kp U   &kp I     &kp O          &kp P          &kp BSPC
+        &kp LSHFT     &kp A    &kp S    &kp D     &kp F  &kp G  &kp EQUAL           &kp LCTRL &kp LGUI  &kp RGUI &mo FN              &kp RBKT &kp H  &kp J   &kp K     &kp L          &kp SEMI       &kp RSHFT
+        &kp LC(LSHFT) &kp Z    &kp X    &kp C     &kp V  &kp B                                &kp PG_UP &kp HOME                              &kp N  &kp M   &kp COMMA &kp DOT        &kp FSLH       &to QWERTY_MAC
         &kp LG(LCTRL) &kp DOWN &kp LEFT &kp RIGHT &kp UP                  &kp SPACE &kp ESC   &kp PG_DN &kp END  &kp ENTER &kp RCTRL                 &kp SQT &kp BSLH  &to DVORAK_MAC &to QWERTY_WIN &mo SYS
       >;
     };
